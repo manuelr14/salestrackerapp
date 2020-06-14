@@ -15,7 +15,7 @@ class App extends Component {
 				<div className="App">
 					<Navbar />
 
-					<Switch>
+					{/* <Switch>
 						<Route exact path={[ '/' ]}>
 							<HomePage />
 						</Route>
@@ -28,7 +28,7 @@ class App extends Component {
 						<Route exact path={[ '/profile' ]}>
 							<Profile />
 						</Route>
-					</Switch>
+					</Switch> */}
 				</div>
 			</Router>
 		);
