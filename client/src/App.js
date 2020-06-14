@@ -1,20 +1,37 @@
-import React, { Component } from "react";
-import logo from "./logo.svg";
-import "./App.css";
+import React, { Component } from 'react';
+import './App.css';
+import Navbar from './components/navbar/index';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import HomePage from './pages/homePage';
+import Profile from './pages/profile';
+import Sales from './pages/sales';
 
-function App() {
-  return (
-    <div className="App">
-      <div className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h2>Welcome to React</h2>
-      </div>
-      <p className="App-intro">
-        To get started, edit <code>src/App.js</code> and save to reload.
-      </p>
-    </div>
-  );
+
+class App extends Component {
+	render() {
+		return (
+			<Router>
+				<div className="App">
+					<Navbar />
+
+					<Switch>
+						<Route exact path={[ '/' ]}>
+							<HomePage />
+						</Route>
+						<Route exact path={[ '/newsale' ]}>
+							<Newsale />
+						</Route>
+						<Route exact path={[ '/sales' ]}>
+							<Sales />
+						</Route>
+						<Route exact path={[ '/profile' ]}>
+							<Profile />
+						</Route>
+					</Switch>
+				</div>
+			</Router>
+		);
+	}
 }
-
 
 export default App;
