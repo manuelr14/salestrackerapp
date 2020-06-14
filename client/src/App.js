@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
 import './App.css';
-import Navbar from './components/navbar/index';
+import Navbar from './components/navbar';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import HomePage from './pages/homePage';
 import Profile from './pages/profile';
 import Sales from './pages/sales';
+import Newsale from './pages/newsale';
 
 
 class App extends Component {
